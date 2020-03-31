@@ -16,13 +16,21 @@ var findPrime = function (num) {
   var prime = 2;
   var primeList = [];
 
-  for (prime = 2; prime <= num; prime++) {
-    numberList = numberList.filter(function (number) {
-      if (number % prime !== 0) {
-        return number;
+  for (prime = 2; prime < num; prime++) {
+    for (var index = 0; index < numberList.length; index++) {
+      if (numberList[index] % prime !== 0) {
+        numberList = numberList.splice(index, 1);
       }
-    });
+    }
   }
+
+  // for (prime = 2; prime <= num; prime++) {
+  //   numberList = numberList.filter(function (number) {
+  //     if (number % prime !== 0) {
+  //       return number;
+  //     }
+  //   });
+  // }
 
 
   return (numberList);
