@@ -9,15 +9,21 @@ var findPrime = function (num) {
     numberList.push(i);
   };
 
+
   numberList.forEach(function (numbie) {
     if (numbie % prime === 0) {
 
     } else {
       primeList.push(numbie)
-
     }
-
   });
+
+  for (var i = 0; i < primeList.length - 1; i++) {
+
+
+
+  })
+
 
 
   return (primeList);
